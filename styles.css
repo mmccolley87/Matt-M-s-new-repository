@@ -18,29 +18,32 @@ body {
     display: flex;
     flex-direction: row;
     gap: 24px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .card {
-    background-color: #f2f1ed;
+    background-color: color-mix(in srgb, #F47321 18%, white);
     border-radius: 12px;
     padding: 40px 32px;
     width: 320px;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    color: #005030;
 }
 
 .card-title {
     font-size: 32px;
-    font-weight: 600;
-    color: #333;
+    font-weight: 800;
+    color: #005030;
     margin-bottom: 8px;
 }
 
 .card-price {
     font-size: 20px;
-    color: #666;
+    color: #005030;
     margin-bottom: 24px;
 }
 
@@ -48,9 +51,18 @@ body {
     margin-bottom: 32px;
 }
 
+.card-spacer {
+    flex: 1;
+    min-height: 0;
+}
+
+.card--business .card-content {
+    margin-bottom: 16px;
+}
+
 .includes-text {
     font-size: 16px;
-    color: #333;
+    color: #005030;
     margin-bottom: 16px;
 }
 
@@ -64,11 +76,11 @@ body {
     align-items: center;
     margin-bottom: 12px;
     font-size: 15px;
-    color: #333;
+    color: #005030;
 }
 
 .checkmark {
-    color: #4a4a4a;
+    color: #005030;
     font-size: 18px;
     margin-right: 12px;
     font-weight: bold;
@@ -76,21 +88,21 @@ body {
 
 .download-button {
     width: fit-content;
-    background-color: #e6e5e0;
+    background-color: #005030;
     border: none;
     border-radius: 999px;
     padding: 14px 24px;
     font-size: 16px;
-    font-weight: 500;
-    color: #333;
+    font-weight: 700;
+    color: #FFFFFF;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
 
 .download-button:hover {
-    background-color: #D8D6CE;
+    background-color: #006940;
 }
 
 .download-button:active {
-    background-color: #D8D6CE;
+    background-color: #006940;
 }
