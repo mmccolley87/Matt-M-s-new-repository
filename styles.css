@@ -5,6 +5,8 @@
 }
 
 body {
+    margin: 0;
+    box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: #f5f5f5;
     display: flex;
@@ -15,55 +17,67 @@ body {
 }
 
 .cards-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     gap: 24px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: flex-start;
 }
 
 .card {
-    background-color: color-mix(in srgb, #F47321 18%, white);
-    border-radius: 12px;
-    padding: 40px 32px;
-    width: 320px;
-    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    color: #005030;
+    min-height: 380px;
+    background-color: rgb(242, 241, 237);
+    width: 320px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.card-top {
+    display: flex;
+    flex-direction: column;
 }
 
 .card-title {
-    font-size: 32px;
-    font-weight: 800;
-    color: #005030;
+    font-size: 20px;
+    font-weight: 500;
+    color: #26251e;
     margin-bottom: 8px;
 }
 
 .card-price {
     font-size: 20px;
-    color: #005030;
-    margin-bottom: 24px;
+    color: rgba(38, 37, 30, 0.4);
+    display: flex;
+    align-items: baseline;
+    gap: 0;
 }
 
-.card-content {
-    margin-bottom: 32px;
+.card-price-amount {
+    font-size: 20px;
+    font-weight: 400;
+    color: inherit;
 }
 
-.card-spacer {
-    flex: 1;
-    min-height: 0;
-}
-
-.card--business .card-content {
-    margin-bottom: 16px;
+.card-price-period {
+    font-size: 14px;
+    color: inherit;
 }
 
 .includes-text {
     font-size: 16px;
-    color: #005030;
-    margin-bottom: 16px;
+    color: rgba(38, 37, 30, 0.5);
+    margin: 16px 0px;
 }
 
 .features-list {
@@ -74,35 +88,36 @@ body {
 .features-list li {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
-    font-size: 15px;
-    color: #005030;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #26251e;
 }
 
 .checkmark {
-    color: #005030;
-    font-size: 18px;
-    margin-right: 12px;
-    font-weight: bold;
+    color: #26251e;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: regular;
 }
 
 .download-button {
+    margin-top: auto;
     width: fit-content;
-    background-color: #005030;
+    background-color: #e6e5e0;
     border: none;
     border-radius: 999px;
     padding: 14px 24px;
     font-size: 16px;
-    font-weight: 700;
-    color: #FFFFFF;
+    font-weight: 500;
+    color: #333;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
 
 .download-button:hover {
-    background-color: #006940;
+    background-color: #D8D6CE;
 }
 
 .download-button:active {
-    background-color: #006940;
+    background-color: #D8D6CE;
 }
